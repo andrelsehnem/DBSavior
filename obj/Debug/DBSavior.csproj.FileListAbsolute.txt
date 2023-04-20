@@ -1,0 +1,15 @@
+D:\Projetos\C#\DBSavior\bin\Debug\DBSavior.exe.config
+D:\Projetos\C#\DBSavior\bin\Debug\DBSavior.exe
+D:\Projetos\C#\DBSavior\bin\Debug\DBSavior.pdb
+D:\Projetos\C#\DBSavior\bin\Debug\MetroFramework.Design.dll
+D:\Projetos\C#\DBSavior\bin\Debug\MetroFramework.dll
+D:\Projetos\C#\DBSavior\bin\Debug\MetroFramework.Fonts.dll
+D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.csproj.AssemblyReference.cache
+D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.csproj.SuggestedBindingRedirects.cache
+D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.frmPrincipal.resources
+D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.Properties.Resources.resources
+D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.csproj.GenerateResource.cache
+D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.csproj.CoreCompileInputs.cache
+D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.csproj.CopyComplete
+D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.exe
+D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.pdb
