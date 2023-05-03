@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DBSavior.Forms;
 
-namespace DBSavior
+namespace DBSavior.Forms
 {
-    public partial class frmPrincipal : MetroFramework.Forms.MetroForm
+    public partial class frmFirebird_conv : MetroFramework.Forms.MetroForm
     {
-        public frmPrincipal()
+        public frmFirebird_conv()
         {
             InitializeComponent();
         }
@@ -23,10 +22,9 @@ namespace DBSavior
 
         }
 
-        private void btFbkFdb_Click(object sender, EventArgs e)
+        private void frmFirebird_conv_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmFirebird_conv f = new frmFirebird_conv();
-            f.ShowDialog();
+
         }
     }
 }

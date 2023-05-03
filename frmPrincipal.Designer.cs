@@ -32,7 +32,7 @@
             this.tabMySQL = new MetroFramework.Controls.MetroTabPage();
             this.tabFirebird = new MetroFramework.Controls.MetroTabPage();
             this.btGkbGbd = new MetroFramework.Controls.MetroButton();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.painelFirebird = new MetroFramework.Controls.MetroPanel();
             this.btFbkFdb = new MetroFramework.Controls.MetroButton();
             this.tabPostgre = new MetroFramework.Controls.MetroTabPage();
             this.btPostgSql = new MetroFramework.Controls.MetroButton();
@@ -52,8 +52,8 @@
             this.metroTabControl1.HotTrack = true;
             this.metroTabControl1.Location = new System.Drawing.Point(2, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(792, 368);
+            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.Size = new System.Drawing.Size(792, 467);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -66,7 +66,7 @@
             this.tabMySQL.HorizontalScrollbarSize = 10;
             this.tabMySQL.Location = new System.Drawing.Point(4, 41);
             this.tabMySQL.Name = "tabMySQL";
-            this.tabMySQL.Size = new System.Drawing.Size(784, 323);
+            this.tabMySQL.Size = new System.Drawing.Size(784, 422);
             this.tabMySQL.Style = MetroFramework.MetroColorStyle.Yellow;
             this.tabMySQL.TabIndex = 0;
             this.tabMySQL.Text = "MySQL";
@@ -78,14 +78,14 @@
             // tabFirebird
             // 
             this.tabFirebird.Controls.Add(this.btGkbGbd);
-            this.tabFirebird.Controls.Add(this.metroPanel1);
+            this.tabFirebird.Controls.Add(this.painelFirebird);
             this.tabFirebird.Controls.Add(this.btFbkFdb);
             this.tabFirebird.HorizontalScrollbarBarColor = true;
             this.tabFirebird.HorizontalScrollbarHighlightOnWheel = false;
             this.tabFirebird.HorizontalScrollbarSize = 10;
             this.tabFirebird.Location = new System.Drawing.Point(4, 41);
             this.tabFirebird.Name = "tabFirebird";
-            this.tabFirebird.Size = new System.Drawing.Size(784, 323);
+            this.tabFirebird.Size = new System.Drawing.Size(784, 422);
             this.tabFirebird.Style = MetroFramework.MetroColorStyle.Green;
             this.tabFirebird.TabIndex = 1;
             this.tabFirebird.Text = "Firebird";
@@ -100,23 +100,23 @@
             this.btGkbGbd.Name = "btGkbGbd";
             this.btGkbGbd.Size = new System.Drawing.Size(98, 30);
             this.btGkbGbd.TabIndex = 4;
-            this.btGkbGbd.Text = ".GBK <=> .GDB";
+            this.btGkbGbd.Text = ".GBK -> .GDB";
             this.btGkbGbd.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btGkbGbd.UseSelectable = true;
             // 
-            // metroPanel1
+            // painelFirebird
             // 
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(-4, 51);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(792, 279);
-            this.metroPanel1.TabIndex = 3;
-            this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.painelFirebird.HorizontalScrollbarBarColor = true;
+            this.painelFirebird.HorizontalScrollbarHighlightOnWheel = false;
+            this.painelFirebird.HorizontalScrollbarSize = 10;
+            this.painelFirebird.Location = new System.Drawing.Point(-4, 51);
+            this.painelFirebird.Name = "painelFirebird";
+            this.painelFirebird.Size = new System.Drawing.Size(792, 374);
+            this.painelFirebird.TabIndex = 3;
+            this.painelFirebird.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.painelFirebird.VerticalScrollbarBarColor = true;
+            this.painelFirebird.VerticalScrollbarHighlightOnWheel = false;
+            this.painelFirebird.VerticalScrollbarSize = 10;
             // 
             // btFbkFdb
             // 
@@ -124,9 +124,10 @@
             this.btFbkFdb.Name = "btFbkFdb";
             this.btFbkFdb.Size = new System.Drawing.Size(98, 30);
             this.btFbkFdb.TabIndex = 2;
-            this.btFbkFdb.Text = ".FBK <=> .FDB";
+            this.btFbkFdb.Text = ".FBK -> .FDB";
             this.btFbkFdb.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btFbkFdb.UseSelectable = true;
+            this.btFbkFdb.Click += new System.EventHandler(this.btFbkFdb_Click);
             // 
             // tabPostgre
             // 
@@ -138,7 +139,7 @@
             this.tabPostgre.HorizontalScrollbarSize = 10;
             this.tabPostgre.Location = new System.Drawing.Point(4, 41);
             this.tabPostgre.Name = "tabPostgre";
-            this.tabPostgre.Size = new System.Drawing.Size(784, 323);
+            this.tabPostgre.Size = new System.Drawing.Size(784, 422);
             this.tabPostgre.Style = MetroFramework.MetroColorStyle.Green;
             this.tabPostgre.TabIndex = 3;
             this.tabPostgre.Text = "PostgreSQL";
@@ -164,7 +165,7 @@
             this.metroPanel2.HorizontalScrollbarSize = 10;
             this.metroPanel2.Location = new System.Drawing.Point(-4, 51);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(792, 279);
+            this.metroPanel2.Size = new System.Drawing.Size(792, 375);
             this.metroPanel2.TabIndex = 3;
             this.metroPanel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel2.VerticalScrollbarBarColor = true;
@@ -185,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 431);
+            this.ClientSize = new System.Drawing.Size(795, 531);
             this.Controls.Add(this.metroTabControl1);
             this.Name = "frmPrincipal";
             this.Style = MetroFramework.MetroColorStyle.Yellow;
@@ -205,7 +206,7 @@
         private MetroFramework.Controls.MetroTabPage tabMySQL;
         private MetroFramework.Controls.MetroTabPage tabFirebird;
         private MetroFramework.Controls.MetroButton btFbkFdb;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroPanel painelFirebird;
         private MetroFramework.Controls.MetroButton btGkbGbd;
         private MetroFramework.Controls.MetroTabPage tabPostgre;
         private MetroFramework.Controls.MetroButton btPostgSql;

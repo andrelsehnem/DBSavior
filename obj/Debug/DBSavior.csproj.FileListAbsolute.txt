@@ -13,3 +13,4 @@ D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.csproj.CoreCompileInputs.cache
 D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.csproj.CopyComplete
 D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.exe
 D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.pdb
+D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.Forms.frmFirebird_conv.resources
