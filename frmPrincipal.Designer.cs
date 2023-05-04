@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabMySQL = new MetroFramework.Controls.MetroTabPage();
             this.tabFirebird = new MetroFramework.Controls.MetroTabPage();
@@ -100,9 +101,10 @@
             this.btGkbGbd.Name = "btGkbGbd";
             this.btGkbGbd.Size = new System.Drawing.Size(98, 30);
             this.btGkbGbd.TabIndex = 4;
-            this.btGkbGbd.Text = ".GBK -> .GDB";
+            this.btGkbGbd.Text = ".GBK <-> .GDB";
             this.btGkbGbd.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btGkbGbd.UseSelectable = true;
+            this.btGkbGbd.Click += new System.EventHandler(this.btGkbGbd_Click);
             // 
             // painelFirebird
             // 
@@ -124,7 +126,7 @@
             this.btFbkFdb.Name = "btFbkFdb";
             this.btFbkFdb.Size = new System.Drawing.Size(98, 30);
             this.btFbkFdb.TabIndex = 2;
-            this.btFbkFdb.Text = ".FBK -> .FDB";
+            this.btFbkFdb.Text = ".FBK <-> .FDB";
             this.btFbkFdb.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btFbkFdb.UseSelectable = true;
             this.btFbkFdb.Click += new System.EventHandler(this.btFbkFdb_Click);
@@ -188,6 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 531);
             this.Controls.Add(this.metroTabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.Style = MetroFramework.MetroColorStyle.Yellow;
             this.Text = "DBSavior";

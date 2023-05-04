@@ -14,3 +14,7 @@ D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.csproj.CopyComplete
 D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.exe
 D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.pdb
 D:\Projetos\C#\DBSavior\obj\Debug\DBSavior.Forms.frmFirebird_conv.resources
+D:\Projetos\C#\DBSavior\bin\Debug\Cake.Powershell.dll
+D:\Projetos\C#\DBSavior\bin\Debug\System.Management.Automation.dll
+D:\Projetos\C#\DBSavior\bin\Debug\Cake.Powershell.pdb
+D:\Projetos\C#\DBSavior\bin\Debug\Cake.Powershell.xml

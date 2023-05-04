@@ -13,3 +13,8 @@ D:\Projetos\C#\DBSavior\obj\Release\DBSavior.csproj.CoreCompileInputs.cache
 D:\Projetos\C#\DBSavior\obj\Release\DBSavior.csproj.CopyComplete
 D:\Projetos\C#\DBSavior\obj\Release\DBSavior.exe
 D:\Projetos\C#\DBSavior\obj\Release\DBSavior.pdb
+D:\Projetos\C#\DBSavior\bin\Release\Cake.Powershell.dll
+D:\Projetos\C#\DBSavior\bin\Release\System.Management.Automation.dll
+D:\Projetos\C#\DBSavior\bin\Release\Cake.Powershell.pdb
+D:\Projetos\C#\DBSavior\bin\Release\Cake.Powershell.xml
+D:\Projetos\C#\DBSavior\obj\Release\DBSavior.Forms.frmFirebird_conv.resources

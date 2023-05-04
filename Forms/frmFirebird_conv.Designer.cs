@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.painelFirebird = new MetroFramework.Controls.MetroPanel();
+            this.txtConsoleFire = new MetroFramework.Controls.MetroTextBox();
             this.groupDriveFire = new System.Windows.Forms.GroupBox();
             this.radioFire40 = new MetroFramework.Controls.MetroRadioButton();
             this.radioFire30 = new MetroFramework.Controls.MetroRadioButton();
@@ -44,7 +45,7 @@
             this.lblArquivoB = new MetroFramework.Controls.MetroLabel();
             this.txtArquivoK = new MetroFramework.Controls.MetroTextBox();
             this.lblArquivoK = new MetroFramework.Controls.MetroLabel();
-            this.txtConsoleFire = new MetroFramework.Controls.MetroTextBox();
+            this.fileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.painelFirebird.SuspendLayout();
             this.groupDriveFire.SuspendLayout();
@@ -71,7 +72,7 @@
             this.painelFirebird.HorizontalScrollbarBarColor = true;
             this.painelFirebird.HorizontalScrollbarHighlightOnWheel = false;
             this.painelFirebird.HorizontalScrollbarSize = 10;
-            this.painelFirebird.Location = new System.Drawing.Point(3, 63);
+            this.painelFirebird.Location = new System.Drawing.Point(0, 0);
             this.painelFirebird.Name = "painelFirebird";
             this.painelFirebird.Size = new System.Drawing.Size(792, 374);
             this.painelFirebird.TabIndex = 4;
@@ -79,6 +80,42 @@
             this.painelFirebird.VerticalScrollbarBarColor = true;
             this.painelFirebird.VerticalScrollbarHighlightOnWheel = false;
             this.painelFirebird.VerticalScrollbarSize = 10;
+            // 
+            // txtConsoleFire
+            // 
+            // 
+            // 
+            // 
+            this.txtConsoleFire.CustomButton.Image = null;
+            this.txtConsoleFire.CustomButton.Location = new System.Drawing.Point(566, 1);
+            this.txtConsoleFire.CustomButton.Name = "";
+            this.txtConsoleFire.CustomButton.Size = new System.Drawing.Size(187, 187);
+            this.txtConsoleFire.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtConsoleFire.CustomButton.TabIndex = 1;
+            this.txtConsoleFire.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtConsoleFire.CustomButton.UseSelectable = true;
+            this.txtConsoleFire.CustomButton.Visible = false;
+            this.txtConsoleFire.Lines = new string[] {
+        "metroTextBox3"};
+            this.txtConsoleFire.Location = new System.Drawing.Point(20, 175);
+            this.txtConsoleFire.MaxLength = 32767;
+            this.txtConsoleFire.Multiline = true;
+            this.txtConsoleFire.Name = "txtConsoleFire";
+            this.txtConsoleFire.PasswordChar = '\0';
+            this.txtConsoleFire.ReadOnly = true;
+            this.txtConsoleFire.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtConsoleFire.SelectedText = "";
+            this.txtConsoleFire.SelectionLength = 0;
+            this.txtConsoleFire.SelectionStart = 0;
+            this.txtConsoleFire.ShortcutsEnabled = true;
+            this.txtConsoleFire.Size = new System.Drawing.Size(754, 189);
+            this.txtConsoleFire.Style = MetroFramework.MetroColorStyle.Red;
+            this.txtConsoleFire.TabIndex = 11;
+            this.txtConsoleFire.Text = "metroTextBox3";
+            this.txtConsoleFire.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtConsoleFire.UseSelectable = true;
+            this.txtConsoleFire.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtConsoleFire.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // groupDriveFire
             // 
@@ -164,6 +201,7 @@
             this.btKtoB.Text = ".FBK -> .FDB";
             this.btKtoB.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btKtoB.UseSelectable = true;
+            this.btKtoB.Click += new System.EventHandler(this.btKtoB_Click);
             // 
             // btBuscarB
             // 
@@ -175,6 +213,7 @@
             this.btBuscarB.Text = "Buscar";
             this.btBuscarB.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btBuscarB.UseSelectable = true;
+            this.btBuscarB.Click += new System.EventHandler(this.btBuscarB_Click);
             // 
             // btBuscarK
             // 
@@ -186,6 +225,7 @@
             this.btBuscarK.Text = "Buscar";
             this.btBuscarK.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btBuscarK.UseSelectable = true;
+            this.btBuscarK.Click += new System.EventHandler(this.btBuscarK_Click);
             // 
             // txtArquivoB
             // 
@@ -266,6 +306,7 @@
             this.txtArquivoK.UseSelectable = true;
             this.txtArquivoK.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtArquivoK.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtArquivoK.Leave += new System.EventHandler(this.txtArquivoK_Leave);
             // 
             // lblArquivoK
             // 
@@ -278,41 +319,9 @@
             this.lblArquivoK.Text = "Arquivo .FBK";
             this.lblArquivoK.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // txtConsoleFire
+            // fileDialog
             // 
-            // 
-            // 
-            // 
-            this.txtConsoleFire.CustomButton.Image = null;
-            this.txtConsoleFire.CustomButton.Location = new System.Drawing.Point(566, 1);
-            this.txtConsoleFire.CustomButton.Name = "";
-            this.txtConsoleFire.CustomButton.Size = new System.Drawing.Size(187, 187);
-            this.txtConsoleFire.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtConsoleFire.CustomButton.TabIndex = 1;
-            this.txtConsoleFire.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtConsoleFire.CustomButton.UseSelectable = true;
-            this.txtConsoleFire.CustomButton.Visible = false;
-            this.txtConsoleFire.Lines = new string[] {
-        "metroTextBox3"};
-            this.txtConsoleFire.Location = new System.Drawing.Point(20, 175);
-            this.txtConsoleFire.MaxLength = 32767;
-            this.txtConsoleFire.Multiline = true;
-            this.txtConsoleFire.Name = "txtConsoleFire";
-            this.txtConsoleFire.PasswordChar = '\0';
-            this.txtConsoleFire.ReadOnly = true;
-            this.txtConsoleFire.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtConsoleFire.SelectedText = "";
-            this.txtConsoleFire.SelectionLength = 0;
-            this.txtConsoleFire.SelectionStart = 0;
-            this.txtConsoleFire.ShortcutsEnabled = true;
-            this.txtConsoleFire.Size = new System.Drawing.Size(754, 189);
-            this.txtConsoleFire.Style = MetroFramework.MetroColorStyle.Red;
-            this.txtConsoleFire.TabIndex = 11;
-            this.txtConsoleFire.Text = "metroTextBox3";
-            this.txtConsoleFire.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtConsoleFire.UseSelectable = true;
-            this.txtConsoleFire.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtConsoleFire.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.fileDialog.FileName = "openFileDialog1";
             // 
             // frmFirebird_conv
             // 
@@ -339,7 +348,6 @@
         #endregion
 
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
-        private MetroFramework.Controls.MetroPanel painelFirebird;
         private MetroFramework.Controls.MetroButton btKtoB;
         private MetroFramework.Controls.MetroButton btBuscarB;
         private MetroFramework.Controls.MetroButton btBuscarK;
@@ -354,5 +362,7 @@
         private MetroFramework.Controls.MetroRadioButton radioFire25;
         private MetroFramework.Controls.MetroRadioButton radioFire20;
         private MetroFramework.Controls.MetroTextBox txtConsoleFire;
+        public MetroFramework.Controls.MetroPanel painelFirebird;
+        private System.Windows.Forms.OpenFileDialog fileDialog;
     }
 }

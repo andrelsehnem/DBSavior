@@ -25,8 +25,17 @@ namespace DBSavior
 
         private void btFbkFdb_Click(object sender, EventArgs e)
         {
-            frmFirebird_conv f = new frmFirebird_conv();
-            f.ShowDialog();
+            painelFirebird.Controls.Clear();    
+            frmFirebird_conv f = new frmFirebird_conv(FirebirdType.fbkFbd);
+            painelFirebird.Controls.Add(f.painelFirebird);
+            //f.ShowDialog();
+        }
+
+        private void btGkbGbd_Click(object sender, EventArgs e)
+        {
+            painelFirebird.Controls.Clear();
+            frmFirebird_conv f = new frmFirebird_conv(FirebirdType.gbkGbd);
+            painelFirebird.Controls.Add(f.painelFirebird);
         }
     }
 }
