@@ -33,6 +33,7 @@
             this.painelFirebird = new MetroFramework.Controls.MetroPanel();
             this.txtConsoleFire = new MetroFramework.Controls.MetroTextBox();
             this.groupDriveFire = new System.Windows.Forms.GroupBox();
+            this.lblDrive = new MetroFramework.Controls.MetroLabel();
             this.radioFire40 = new MetroFramework.Controls.MetroRadioButton();
             this.radioFire30 = new MetroFramework.Controls.MetroRadioButton();
             this.radioFire25 = new MetroFramework.Controls.MetroRadioButton();
@@ -96,7 +97,7 @@
             this.txtConsoleFire.CustomButton.UseSelectable = true;
             this.txtConsoleFire.CustomButton.Visible = false;
             this.txtConsoleFire.Lines = new string[] {
-        "metroTextBox3"};
+        "Aguardando início..."};
             this.txtConsoleFire.Location = new System.Drawing.Point(20, 175);
             this.txtConsoleFire.MaxLength = 32767;
             this.txtConsoleFire.Multiline = true;
@@ -111,7 +112,7 @@
             this.txtConsoleFire.Size = new System.Drawing.Size(754, 189);
             this.txtConsoleFire.Style = MetroFramework.MetroColorStyle.Red;
             this.txtConsoleFire.TabIndex = 11;
-            this.txtConsoleFire.Text = "metroTextBox3";
+            this.txtConsoleFire.Text = "Aguardando início...";
             this.txtConsoleFire.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtConsoleFire.UseSelectable = true;
             this.txtConsoleFire.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -120,6 +121,7 @@
             // groupDriveFire
             // 
             this.groupDriveFire.BackColor = System.Drawing.Color.Transparent;
+            this.groupDriveFire.Controls.Add(this.lblDrive);
             this.groupDriveFire.Controls.Add(this.radioFire40);
             this.groupDriveFire.Controls.Add(this.radioFire30);
             this.groupDriveFire.Controls.Add(this.radioFire25);
@@ -129,7 +131,17 @@
             this.groupDriveFire.Size = new System.Drawing.Size(394, 51);
             this.groupDriveFire.TabIndex = 10;
             this.groupDriveFire.TabStop = false;
-            this.groupDriveFire.Text = "Drive";
+            // 
+            // lblDrive
+            // 
+            this.lblDrive.AutoSize = true;
+            this.lblDrive.Location = new System.Drawing.Point(7, -3);
+            this.lblDrive.Name = "lblDrive";
+            this.lblDrive.Size = new System.Drawing.Size(39, 19);
+            this.lblDrive.Style = MetroFramework.MetroColorStyle.Red;
+            this.lblDrive.TabIndex = 5;
+            this.lblDrive.Text = "Drive";
+            this.lblDrive.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // radioFire40
             // 
@@ -319,10 +331,6 @@
             this.lblArquivoK.Text = "Arquivo .FBK";
             this.lblArquivoK.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // fileDialog
-            // 
-            this.fileDialog.FileName = "openFileDialog1";
-            // 
             // frmFirebird_conv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,5 +372,6 @@
         private MetroFramework.Controls.MetroTextBox txtConsoleFire;
         public MetroFramework.Controls.MetroPanel painelFirebird;
         private System.Windows.Forms.OpenFileDialog fileDialog;
+        private MetroFramework.Controls.MetroLabel lblDrive;
     }
 }

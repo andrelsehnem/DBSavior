@@ -9,14 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBSavior.Class;
+using static DBSavior.Class.Globals;
 
 namespace DBSavior.Forms
 {
-    public enum FirebirdType
-    {
-        fbkFbd = 0,
-        gbkGbd
-    }
     public partial class frmFirebird_conv : MetroFramework.Forms.MetroForm
     {
         private Powershell power = new Powershell();
