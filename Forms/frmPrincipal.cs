@@ -45,5 +45,12 @@ namespace DBSavior
             frmPostgre_restore f = new frmPostgre_restore(PostgresType.psql);
             painelPostgres.Controls.Add(f.painelPostg);
         }
+
+        private void btPgdmp_Click(object sender, EventArgs e)
+        {
+            painelPostgres.Controls.Clear();
+            frmPostgre_restore f = new frmPostgre_restore(PostgresType.pg_restore);
+            painelPostgres.Controls.Add(f.painelPostg);
+        }
     }
 }

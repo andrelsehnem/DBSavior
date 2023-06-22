@@ -44,15 +44,19 @@ namespace DBSavior.Forms
         private void btIniciar_Click(object sender, EventArgs e)
         {
             ConectarBanco();
+            caminhoArquivo = txtArquivo.Text;
+
+            if (!pg_con.IsOpen()) return;
 
             switch (p)
             {
                 case PostgresType.psql:
-                    comando = $@"Postgres\psql.exe -h {banco.server} -p {banco.porta} -U {banco.user} -d {banco.banco} -f ""D:\\Importacoes\\Prioridade 10\\backup\\TMP_BACKUP_EMP_2091_1.backup""";
+                    comando = $@"Postgres\psql.exe -h {banco.server} -p {banco.porta} -U {banco.user} -d {banco.banco} -f ""{caminhoArquivo}""";
                     break;
                 case PostgresType.pg_restore:
-                    comando = $@"Postgres\pg_restore.exe --host {banco.server} --port {banco.porta} --username {banco.user} --no-password --dbname {banco.banco} --verbose ""D:\\Importacoes\\Prioridade 10\\backup\\TMP_BACKUP_EMP_2091_1.backup""";
+                    comando = $@"Postgres\pg_restore.exe --host {banco.server} --port {banco.porta} --username {banco.user} --no-password --dbname {banco.banco} --verbose ""{caminhoArquivo}"" ";
                     //pg_restore.exe --host "localhost" --port "5432" --username "postgres" --no-password --dbname "prioridade10_1" --verbose "D:\\Importacoes\\Prioridade 10\\backup\\TMP_BACKUP_EMP_2091_1.backup"
+                    //pg_restore --host <hostname> --port <porta> --username <usuário> --dbname <nome_banco> --verbose <caminho_arquivo.backup>
                     break;
             }
 
@@ -72,6 +76,7 @@ namespace DBSavior.Forms
             pg_con = new Postgres(banco);
 
             if(pg_con.Open()) txtConsole.AppendText(NovaLinha + NovaLinha + "Conectado ao Banco ");
+            else txtConsole.AppendText(NovaLinha + NovaLinha + "Erro na Conexão ");
         }
 
         private void btBuscar_Click(object sender, EventArgs e)

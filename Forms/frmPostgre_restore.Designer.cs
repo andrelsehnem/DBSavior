@@ -29,8 +29,14 @@
         private void InitializeComponent()
         {
             this.painelPostg = new MetroFramework.Controls.MetroPanel();
+            this.btIniciar = new MetroFramework.Controls.MetroButton();
+            this.btBuscar = new MetroFramework.Controls.MetroButton();
+            this.txtArquivo = new MetroFramework.Controls.MetroTextBox();
+            this.lblArquivo = new MetroFramework.Controls.MetroLabel();
             this.txtConsole = new MetroFramework.Controls.MetroTextBox();
             this.groupBanco = new System.Windows.Forms.GroupBox();
+            this.txtSenha = new MetroFramework.Controls.MetroTextBox();
+            this.lblSenha = new MetroFramework.Controls.MetroLabel();
             this.txtBanco = new MetroFramework.Controls.MetroTextBox();
             this.lblBanco = new MetroFramework.Controls.MetroLabel();
             this.txtUser = new MetroFramework.Controls.MetroTextBox();
@@ -39,13 +45,7 @@
             this.lblPorta = new MetroFramework.Controls.MetroLabel();
             this.txtServidor = new MetroFramework.Controls.MetroTextBox();
             this.lblServ = new MetroFramework.Controls.MetroLabel();
-            this.btBuscar = new MetroFramework.Controls.MetroButton();
-            this.txtArquivo = new MetroFramework.Controls.MetroTextBox();
-            this.lblArquivo = new MetroFramework.Controls.MetroLabel();
-            this.btIniciar = new MetroFramework.Controls.MetroButton();
             this.fileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.txtSenha = new MetroFramework.Controls.MetroTextBox();
-            this.lblSenha = new MetroFramework.Controls.MetroLabel();
             this.painelPostg.SuspendLayout();
             this.groupBanco.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,75 @@
             this.painelPostg.VerticalScrollbarBarColor = true;
             this.painelPostg.VerticalScrollbarHighlightOnWheel = false;
             this.painelPostg.VerticalScrollbarSize = 10;
+            // 
+            // btIniciar
+            // 
+            this.btIniciar.Location = new System.Drawing.Point(702, 71);
+            this.btIniciar.Name = "btIniciar";
+            this.btIniciar.Size = new System.Drawing.Size(75, 45);
+            this.btIniciar.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btIniciar.TabIndex = 16;
+            this.btIniciar.Text = "Iniciar";
+            this.btIniciar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btIniciar.UseSelectable = true;
+            this.btIniciar.Click += new System.EventHandler(this.btIniciar_Click);
+            // 
+            // btBuscar
+            // 
+            this.btBuscar.Location = new System.Drawing.Point(718, 34);
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Size = new System.Drawing.Size(59, 23);
+            this.btBuscar.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btBuscar.TabIndex = 15;
+            this.btBuscar.Text = "Buscar";
+            this.btBuscar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btBuscar.UseSelectable = true;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
+            // 
+            // txtArquivo
+            // 
+            // 
+            // 
+            // 
+            this.txtArquivo.CustomButton.Image = null;
+            this.txtArquivo.CustomButton.Location = new System.Drawing.Point(422, 1);
+            this.txtArquivo.CustomButton.Name = "";
+            this.txtArquivo.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtArquivo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtArquivo.CustomButton.TabIndex = 1;
+            this.txtArquivo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtArquivo.CustomButton.UseSelectable = true;
+            this.txtArquivo.CustomButton.Visible = false;
+            this.txtArquivo.Lines = new string[] {
+        "C:\\"};
+            this.txtArquivo.Location = new System.Drawing.Point(268, 34);
+            this.txtArquivo.MaxLength = 32767;
+            this.txtArquivo.Name = "txtArquivo";
+            this.txtArquivo.PasswordChar = '\0';
+            this.txtArquivo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtArquivo.SelectedText = "";
+            this.txtArquivo.SelectionLength = 0;
+            this.txtArquivo.SelectionStart = 0;
+            this.txtArquivo.ShortcutsEnabled = true;
+            this.txtArquivo.Size = new System.Drawing.Size(444, 23);
+            this.txtArquivo.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtArquivo.TabIndex = 14;
+            this.txtArquivo.Text = "C:\\";
+            this.txtArquivo.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtArquivo.UseSelectable = true;
+            this.txtArquivo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtArquivo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblArquivo
+            // 
+            this.lblArquivo.AutoSize = true;
+            this.lblArquivo.Location = new System.Drawing.Point(268, 12);
+            this.lblArquivo.Name = "lblArquivo";
+            this.lblArquivo.Size = new System.Drawing.Size(122, 19);
+            this.lblArquivo.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblArquivo.TabIndex = 13;
+            this.lblArquivo.Text = "Arquivo a restaurar";
+            this.lblArquivo.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // txtConsole
             // 
@@ -126,6 +195,48 @@
             this.groupBanco.Size = new System.Drawing.Size(253, 113);
             this.groupBanco.TabIndex = 2;
             this.groupBanco.TabStop = false;
+            // 
+            // txtSenha
+            // 
+            // 
+            // 
+            // 
+            this.txtSenha.CustomButton.Image = null;
+            this.txtSenha.CustomButton.Location = new System.Drawing.Point(92, 1);
+            this.txtSenha.CustomButton.Name = "";
+            this.txtSenha.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSenha.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSenha.CustomButton.TabIndex = 1;
+            this.txtSenha.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSenha.CustomButton.UseSelectable = true;
+            this.txtSenha.CustomButton.Visible = false;
+            this.txtSenha.Lines = new string[0];
+            this.txtSenha.Location = new System.Drawing.Point(131, 79);
+            this.txtSenha.MaxLength = 32767;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSenha.SelectedText = "";
+            this.txtSenha.SelectionLength = 0;
+            this.txtSenha.SelectionStart = 0;
+            this.txtSenha.ShortcutsEnabled = true;
+            this.txtSenha.Size = new System.Drawing.Size(114, 23);
+            this.txtSenha.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSenha.TabIndex = 9;
+            this.txtSenha.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtSenha.UseSelectable = true;
+            this.txtSenha.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSenha.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Location = new System.Drawing.Point(131, 57);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(44, 19);
+            this.lblSenha.TabIndex = 8;
+            this.lblSenha.Text = "Senha";
+            this.lblSenha.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // txtBanco
             // 
@@ -300,118 +411,6 @@
             this.lblServ.TabIndex = 0;
             this.lblServ.Text = "Servidor";
             this.lblServ.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btBuscar
-            // 
-            this.btBuscar.Location = new System.Drawing.Point(702, 34);
-            this.btBuscar.Name = "btBuscar";
-            this.btBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btBuscar.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btBuscar.TabIndex = 15;
-            this.btBuscar.Text = "Buscar";
-            this.btBuscar.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btBuscar.UseSelectable = true;
-            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
-            // 
-            // txtArquivo
-            // 
-            // 
-            // 
-            // 
-            this.txtArquivo.CustomButton.Image = null;
-            this.txtArquivo.CustomButton.Location = new System.Drawing.Point(406, 1);
-            this.txtArquivo.CustomButton.Name = "";
-            this.txtArquivo.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtArquivo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtArquivo.CustomButton.TabIndex = 1;
-            this.txtArquivo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtArquivo.CustomButton.UseSelectable = true;
-            this.txtArquivo.CustomButton.Visible = false;
-            this.txtArquivo.Lines = new string[] {
-        "C:\\"};
-            this.txtArquivo.Location = new System.Drawing.Point(268, 34);
-            this.txtArquivo.MaxLength = 32767;
-            this.txtArquivo.Multiline = true;
-            this.txtArquivo.Name = "txtArquivo";
-            this.txtArquivo.PasswordChar = '\0';
-            this.txtArquivo.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtArquivo.SelectedText = "";
-            this.txtArquivo.SelectionLength = 0;
-            this.txtArquivo.SelectionStart = 0;
-            this.txtArquivo.ShortcutsEnabled = true;
-            this.txtArquivo.Size = new System.Drawing.Size(428, 23);
-            this.txtArquivo.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtArquivo.TabIndex = 14;
-            this.txtArquivo.Text = "C:\\";
-            this.txtArquivo.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtArquivo.UseSelectable = true;
-            this.txtArquivo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtArquivo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblArquivo
-            // 
-            this.lblArquivo.AutoSize = true;
-            this.lblArquivo.Location = new System.Drawing.Point(268, 12);
-            this.lblArquivo.Name = "lblArquivo";
-            this.lblArquivo.Size = new System.Drawing.Size(122, 19);
-            this.lblArquivo.Style = MetroFramework.MetroColorStyle.Blue;
-            this.lblArquivo.TabIndex = 13;
-            this.lblArquivo.Text = "Arquivo a restaurar";
-            this.lblArquivo.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btIniciar
-            // 
-            this.btIniciar.Location = new System.Drawing.Point(702, 71);
-            this.btIniciar.Name = "btIniciar";
-            this.btIniciar.Size = new System.Drawing.Size(75, 45);
-            this.btIniciar.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btIniciar.TabIndex = 16;
-            this.btIniciar.Text = "Iniciar";
-            this.btIniciar.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btIniciar.UseSelectable = true;
-            this.btIniciar.Click += new System.EventHandler(this.btIniciar_Click);
-            // 
-            // txtSenha
-            // 
-            // 
-            // 
-            // 
-            this.txtSenha.CustomButton.Image = null;
-            this.txtSenha.CustomButton.Location = new System.Drawing.Point(92, 1);
-            this.txtSenha.CustomButton.Name = "";
-            this.txtSenha.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSenha.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSenha.CustomButton.TabIndex = 1;
-            this.txtSenha.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSenha.CustomButton.UseSelectable = true;
-            this.txtSenha.CustomButton.Visible = false;
-            this.txtSenha.Lines = new string[0];
-            this.txtSenha.Location = new System.Drawing.Point(131, 79);
-            this.txtSenha.MaxLength = 32767;
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSenha.SelectedText = "";
-            this.txtSenha.SelectionLength = 0;
-            this.txtSenha.SelectionStart = 0;
-            this.txtSenha.ShortcutsEnabled = true;
-            this.txtSenha.Size = new System.Drawing.Size(114, 23);
-            this.txtSenha.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSenha.TabIndex = 9;
-            this.txtSenha.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtSenha.UseSelectable = true;
-            this.txtSenha.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSenha.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Location = new System.Drawing.Point(131, 57);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(44, 19);
-            this.lblSenha.TabIndex = 8;
-            this.lblSenha.Text = "Senha";
-            this.lblSenha.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // frmPostgre_restore
             // 

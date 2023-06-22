@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.tabMySQL = new MetroFramework.Controls.MetroTabPage();
             this.tabFirebird = new MetroFramework.Controls.MetroTabPage();
             this.btGkbGbd = new MetroFramework.Controls.MetroButton();
             this.painelFirebird = new MetroFramework.Controls.MetroPanel();
             this.btFbkFdb = new MetroFramework.Controls.MetroButton();
-            this.tabMySQL = new MetroFramework.Controls.MetroTabPage();
             this.tabPostgre = new MetroFramework.Controls.MetroTabPage();
             this.btPostgPsql = new MetroFramework.Controls.MetroButton();
             this.painelPostgres = new MetroFramework.Controls.MetroPanel();
@@ -53,12 +53,28 @@
             this.metroTabControl1.HotTrack = true;
             this.metroTabControl1.Location = new System.Drawing.Point(2, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(792, 467);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabControl1.UseSelectable = true;
+            // 
+            // tabMySQL
+            // 
+            this.tabMySQL.HorizontalScrollbarBarColor = true;
+            this.tabMySQL.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabMySQL.HorizontalScrollbarSize = 10;
+            this.tabMySQL.Location = new System.Drawing.Point(4, 41);
+            this.tabMySQL.Name = "tabMySQL";
+            this.tabMySQL.Size = new System.Drawing.Size(784, 422);
+            this.tabMySQL.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.tabMySQL.TabIndex = 0;
+            this.tabMySQL.Text = "MySQL";
+            this.tabMySQL.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabMySQL.VerticalScrollbarBarColor = true;
+            this.tabMySQL.VerticalScrollbarHighlightOnWheel = false;
+            this.tabMySQL.VerticalScrollbarSize = 10;
             // 
             // tabFirebird
             // 
@@ -115,22 +131,6 @@
             this.btFbkFdb.UseSelectable = true;
             this.btFbkFdb.Click += new System.EventHandler(this.btFbkFdb_Click);
             // 
-            // tabMySQL
-            // 
-            this.tabMySQL.HorizontalScrollbarBarColor = true;
-            this.tabMySQL.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabMySQL.HorizontalScrollbarSize = 10;
-            this.tabMySQL.Location = new System.Drawing.Point(4, 41);
-            this.tabMySQL.Name = "tabMySQL";
-            this.tabMySQL.Size = new System.Drawing.Size(784, 422);
-            this.tabMySQL.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.tabMySQL.TabIndex = 0;
-            this.tabMySQL.Text = "MySQL";
-            this.tabMySQL.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tabMySQL.VerticalScrollbarBarColor = true;
-            this.tabMySQL.VerticalScrollbarHighlightOnWheel = false;
-            this.tabMySQL.VerticalScrollbarSize = 10;
-            // 
             // tabPostgre
             // 
             this.tabPostgre.Controls.Add(this.btPostgPsql);
@@ -184,6 +184,7 @@
             this.btPgdmp.Text = "Restore Backup";
             this.btPgdmp.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btPgdmp.UseSelectable = true;
+            this.btPgdmp.Click += new System.EventHandler(this.btPgdmp_Click);
             // 
             // frmPrincipal
             // 

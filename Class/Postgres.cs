@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,14 +40,19 @@ namespace DBSavior.Class
                 return true;
             }catch (Exception ex)
             {
-                switch (ex.HResult)
+                if(ex.Message.StartsWith("28P01"))
                 {
-                    case -2147467259:
-                        if(CriaBanco()) return true;
-                        break;
-                    default:
-                        MessageBox.Show(ex.ToString());
-                        return false;
+                    MessageBox.Show(ex.ToString());
+                    return false;
+                }
+                else if (ex.Message.StartsWith("3D000"))
+                {
+                    if (CriaBanco()) return true;
+                }
+                else
+                {
+                    MessageBox.Show(ex.ToString());
+                    return false;
                 }
                 MessageBox.Show(ex.ToString());
             }
@@ -93,6 +99,15 @@ namespace DBSavior.Class
             if (!Open()) return false;
             ExecuteNonQuery($"CREATE DATABASE {banco.banco} WITH OWNER = {banco.user} ENCODING = 'UTF8' CONNECTION LIMIT = -1 IS_TEMPLATE = False; ");
             return true;
+        }
+
+        public bool IsOpen()
+        {
+            if(connection.State.ToString() == "Closed")
+            {
+                return false;
+            }
+            else return true;
         }
 
         
