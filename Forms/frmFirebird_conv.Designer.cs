@@ -81,6 +81,7 @@
             this.painelFirebird.VerticalScrollbarBarColor = true;
             this.painelFirebird.VerticalScrollbarHighlightOnWheel = false;
             this.painelFirebird.VerticalScrollbarSize = 10;
+            this.painelFirebird.Paint += new System.Windows.Forms.PaintEventHandler(this.painelFirebird_Paint);
             // 
             // txtConsoleFire
             // 

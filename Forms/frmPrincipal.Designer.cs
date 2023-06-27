@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabMySQL = new MetroFramework.Controls.MetroTabPage();
@@ -39,9 +40,11 @@
             this.btPostgPsql = new MetroFramework.Controls.MetroButton();
             this.painelPostgres = new MetroFramework.Controls.MetroPanel();
             this.btPgdmp = new MetroFramework.Controls.MetroButton();
+            this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroTabControl1.SuspendLayout();
             this.tabFirebird.SuspendLayout();
             this.tabPostgre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -53,12 +56,13 @@
             this.metroTabControl1.HotTrack = true;
             this.metroTabControl1.Location = new System.Drawing.Point(2, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(792, 467);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabControl1.UseSelectable = true;
+            this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
             // 
             // tabMySQL
             // 
@@ -186,6 +190,12 @@
             this.btPgdmp.UseSelectable = true;
             this.btPgdmp.Click += new System.EventHandler(this.btPgdmp_Click);
             // 
+            // metroStyleManager
+            // 
+            this.metroStyleManager.Owner = this;
+            this.metroStyleManager.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.metroStyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,6 +212,7 @@
             this.metroTabControl1.ResumeLayout(false);
             this.tabFirebird.ResumeLayout(false);
             this.tabPostgre.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,6 +229,7 @@
         private MetroFramework.Controls.MetroButton btPostgPsql;
         private MetroFramework.Controls.MetroPanel painelPostgres;
         private MetroFramework.Controls.MetroButton btPgdmp;
+        public MetroFramework.Components.MetroStyleManager metroStyleManager;
     }
 }
 

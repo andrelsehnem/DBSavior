@@ -50,7 +50,31 @@ namespace DBSavior
         {
             painelPostgres.Controls.Clear();
             frmPostgre_restore f = new frmPostgre_restore(PostgresType.pg_restore);
-            painelPostgres.Controls.Add(f.painelPostg);
+            painelPostgres.Controls.Add(f.painelPostg);   
+        }
+
+        public void ChangeStyle(MetroFramework.MetroColorStyle color)
+        {
+            metroStyleManager.Style = color;
+            this.Style = metroStyleManager.Style;
+            metroTabControl1.Style = metroStyleManager.Style;
+            this.Refresh(); 
+        }
+
+        private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (metroTabControl1.SelectedIndex)
+            {
+                case 0:
+                    ChangeStyle(MetroFramework.MetroColorStyle.Yellow);
+                    break;
+                case 1:
+                    ChangeStyle(MetroFramework.MetroColorStyle.Red);
+                    break;
+                case 2:
+                    ChangeStyle(MetroFramework.MetroColorStyle.Blue);
+                    break;
+            }
         }
     }
 }

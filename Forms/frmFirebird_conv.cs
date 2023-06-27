@@ -54,6 +54,11 @@ namespace DBSavior.Forms
             }
         }
 
+        private void painelFirebird_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btKtoB_Click(object sender, EventArgs e)
         {
             if (radioFire20.Checked)
