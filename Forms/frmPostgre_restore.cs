@@ -71,7 +71,6 @@ namespace DBSavior.Forms
         private void ConectarBanco()
         {
             banco = new Banco(txtBanco.Text, txtServidor.Text, txtPorta.Text, txtUser.Text, txtSenha.Text, TipoBanco.Postgress);
-            
 
             pg_con = new Postgres(banco);
 

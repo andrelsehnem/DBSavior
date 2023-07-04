@@ -41,7 +41,11 @@
             this.painelPostgres = new MetroFramework.Controls.MetroPanel();
             this.btPgdmp = new MetroFramework.Controls.MetroButton();
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.btGerarBackup_Mysql = new MetroFramework.Controls.MetroButton();
+            this.painelMysql = new MetroFramework.Controls.MetroPanel();
+            this.btRestaurarBackup_Mysql = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1.SuspendLayout();
+            this.tabMySQL.SuspendLayout();
             this.tabFirebird.SuspendLayout();
             this.tabPostgre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
@@ -66,6 +70,9 @@
             // 
             // tabMySQL
             // 
+            this.tabMySQL.Controls.Add(this.btRestaurarBackup_Mysql);
+            this.tabMySQL.Controls.Add(this.painelMysql);
+            this.tabMySQL.Controls.Add(this.btGerarBackup_Mysql);
             this.tabMySQL.HorizontalScrollbarBarColor = true;
             this.tabMySQL.HorizontalScrollbarHighlightOnWheel = false;
             this.tabMySQL.HorizontalScrollbarSize = 10;
@@ -196,6 +203,42 @@
             this.metroStyleManager.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroStyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // btGerarBackup_Mysql
+            // 
+            this.btGerarBackup_Mysql.Location = new System.Drawing.Point(5, 15);
+            this.btGerarBackup_Mysql.Name = "btGerarBackup_Mysql";
+            this.btGerarBackup_Mysql.Size = new System.Drawing.Size(98, 30);
+            this.btGerarBackup_Mysql.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.btGerarBackup_Mysql.TabIndex = 3;
+            this.btGerarBackup_Mysql.Text = "Gerar Backup";
+            this.btGerarBackup_Mysql.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btGerarBackup_Mysql.UseSelectable = true;
+            this.btGerarBackup_Mysql.Click += new System.EventHandler(this.btGerarBackup_Mysql_Click);
+            // 
+            // painelMysql
+            // 
+            this.painelMysql.HorizontalScrollbarBarColor = true;
+            this.painelMysql.HorizontalScrollbarHighlightOnWheel = false;
+            this.painelMysql.HorizontalScrollbarSize = 10;
+            this.painelMysql.Location = new System.Drawing.Point(-4, 51);
+            this.painelMysql.Name = "painelMysql";
+            this.painelMysql.Size = new System.Drawing.Size(792, 375);
+            this.painelMysql.TabIndex = 4;
+            this.painelMysql.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.painelMysql.VerticalScrollbarBarColor = true;
+            this.painelMysql.VerticalScrollbarHighlightOnWheel = false;
+            this.painelMysql.VerticalScrollbarSize = 10;
+            // 
+            // btRestaurarBackup_Mysql
+            // 
+            this.btRestaurarBackup_Mysql.Location = new System.Drawing.Point(109, 15);
+            this.btRestaurarBackup_Mysql.Name = "btRestaurarBackup_Mysql";
+            this.btRestaurarBackup_Mysql.Size = new System.Drawing.Size(98, 30);
+            this.btRestaurarBackup_Mysql.TabIndex = 5;
+            this.btRestaurarBackup_Mysql.Text = "Restaurar Backup";
+            this.btRestaurarBackup_Mysql.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btRestaurarBackup_Mysql.UseSelectable = true;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +253,7 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.metroTabControl1.ResumeLayout(false);
+            this.tabMySQL.ResumeLayout(false);
             this.tabFirebird.ResumeLayout(false);
             this.tabPostgre.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
@@ -230,6 +274,9 @@
         private MetroFramework.Controls.MetroPanel painelPostgres;
         private MetroFramework.Controls.MetroButton btPgdmp;
         public MetroFramework.Components.MetroStyleManager metroStyleManager;
+        private MetroFramework.Controls.MetroButton btRestaurarBackup_Mysql;
+        private MetroFramework.Controls.MetroPanel painelMysql;
+        private MetroFramework.Controls.MetroButton btGerarBackup_Mysql;
     }
 }
 

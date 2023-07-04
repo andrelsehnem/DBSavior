@@ -76,5 +76,13 @@ namespace DBSavior
                     break;
             }
         }
+
+        private void btGerarBackup_Mysql_Click(object sender, EventArgs e)
+        {
+            painelMysql.Controls.Clear();
+            frmMySql_Backups m = new frmMySql_Backups();
+            painelMysql.Controls.Add(m.painelMysql);
+            //f.ShowDialog();
+        }
     }
 }

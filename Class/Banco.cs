@@ -38,7 +38,7 @@ namespace DBSavior.Class
             switch (tpBanco)
             {
                 case TipoBanco.MySql:
-                    return "";
+                    return $"Server ={server}; Port ={porta}; Database ={banco}; uid={user};pwd={senha}; SslMode= none"; 
                 case TipoBanco.Postgress:
                     return $"Server={server};Port={porta};Database={banco};User Id={user};Password={senha}"; 
             }
